@@ -7,7 +7,7 @@ use Benchmark qw(cmpthese timethese :hireswallclock);
 use IO::Capture::Stdout;
 
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 use base 'Exporter';
@@ -70,6 +70,8 @@ This module makes it easy to run your benchmarks in a distribution's test
 suite. This way you just have to look at the CPAN testers reports to see your
 benchmarks being run on many different platforms using many different versions
 of perl.
+
+Ricardo Signes came up with the idea.
 
 =head1 EXPORTS
 
