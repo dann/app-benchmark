@@ -28,7 +28,17 @@ sub benchmark_diag {
     cmpthese(timethese($iterations, $benchmark_hash));
     $capture->stop;
 
-    print "# $_" for $capture->read;
+    {
+        my $previous_default = select(STDOUT);
+        $|++; # autoflush STDOUT
+        select(STDERR);
+        $|++; # autoflush STDERR
+        select($previous_default);
+    }
+
+    chomp(my @lines = $capture->read);
+    warn "# $_\n" for @lines;
+
     plan tests => 1;
     pass('benchmark');
 }
