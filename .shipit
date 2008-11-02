@@ -1,0 +1,9 @@
+steps = FindVersion, ChangeVersion, CheckChangeLog, Manifest, DistTest, Commit, Tag, MakeDist, MyUploadCPAN, DistClean, Twitter
+
+svn.tagpattern = http://svn.coderepos.org/share/lang/perl/App-Benchmark/tags/App-Benchmark-%v
+
+twitter.config = ~/.twitterrc
+twitter.distname = App-Benchmark
+twitter.message = shipped %d %v - soon at %u
+
+
