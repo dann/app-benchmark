@@ -2,6 +2,7 @@ Revision history for Perl extension App-Benchmark
 
 0.02  Sun Nov  2 23:55:40 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
      - documented that rjbs came up with the idea
+     - export benchmark_diag() by default now
 
 0.01  Sun Nov  2 21:31:53 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
      - original version

@@ -13,11 +13,7 @@ our $VERSION = '0.02';
 use base 'Exporter';
 
 
-our %EXPORT_TAGS = (
-    util => [ qw/benchmark_diag/ ],
-);
-
-our @EXPORT_OK = @{ $EXPORT_TAGS{all} = [ map { @$_ } values %EXPORT_TAGS ] };
+our @EXPORT = ('benchmark_diag');
 
 
 sub benchmark_diag {
@@ -57,7 +53,7 @@ App::Benchmark - Output your benchmarks as test diagnostics
 
     # This is t/benchmark.t:
 
-    use App::Benchmark ':all';
+    use App::Benchmark;
 
     benchmark_diag(2_000_000, {
         sqrt => sub { sqrt(2) },
@@ -73,10 +69,7 @@ of perl.
 
 Ricardo Signes came up with the idea.
 
-=head1 EXPORTS
-
-Nothing is exported automatically. The function can be exported using its name
-or the C<:all> tag.
+=head1 FUNCTIONS
 
 =over 4
 
@@ -86,6 +79,8 @@ Takes a number of iterations and a benchmark definition hash, just like
 C<timethese()> from the L<Benchmark> module. Runs the benchmarks and reports
 them, each line prefixed by a hash sign so it doesn't mess up the TAP output.
 Also, a pseudotest is being generated to keep the testing framework happy.
+
+This function is exported automatically.
 
 =back
 
