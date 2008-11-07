@@ -3,7 +3,7 @@ include 'Module::AutoInstall';
 
 name 'App-Benchmark';
 all_from 'lib/App/Benchmark.pm';
-perl_version '5.006';
+perl_version '5.008';
 
 requires 'Benchmark';
 requires 'IO::Capture::Stdout';

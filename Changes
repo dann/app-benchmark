@@ -1,5 +1,9 @@
 Revision history for Perl extension App-Benchmark
 
+0.03  Fri Nov  7 20:44:26 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
+     - require perl 5.8 because 5.6.2's Benchmark.pm doesn't have a
+       :hireswallclock
+
 0.02  Sun Nov  2 23:55:40 CET 2008 (Marcel Gruenauer <marcel@cpan.org>)
      - documented that rjbs came up with the idea
      - export benchmark_diag() by default now
