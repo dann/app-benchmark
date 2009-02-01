@@ -73,7 +73,7 @@ Ricardo Signes came up with the idea.
 
 =over 4
 
-=item benchmark_diag
+=item C<benchmark_diag>
 
 Takes a number of iterations and a benchmark definition hash, just like
 C<timethese()> from the L<Benchmark> module. Runs the benchmarks and reports
